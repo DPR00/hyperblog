@@ -2,3 +2,5 @@ Esta es la historia de Diego Palma, que tiene
 20 años y nació en Perú. En este momento está
 tratando de aprender todas las herramientas
 de git
+
+En cámara parece alto, pero no lo es.
