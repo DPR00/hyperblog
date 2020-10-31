@@ -6,3 +6,4 @@ de git
 En cámara parece alto, pero no lo es.
 
 Hoy hablaremos de su vida.
+Pronto hará un doctorado en robótica o computer vision
