@@ -1,3 +1,4 @@
-Esta es la historio de Diego Palma
+Esta es la historia de Diego Palma, que tiene
+20 años y nació en Perú. En este momento está
 tratando de aprender todas las herramientas
 de git
