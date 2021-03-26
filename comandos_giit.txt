@@ -97,6 +97,8 @@
 
 39. git pull origin master
     - Fusiona una copia del master remoto con el local
+    git pull origin master --allow-unrelated-histories
+    - Fusiona repositorios con historias no relacionadas-
 
 40. git remote set-url origin <ssh-url>
     - Configura git para conectar con el repositorio remoto
@@ -104,7 +106,7 @@
 --------------------------------SSH: Generación de claves pública y privadas-----------------------------------------------------------------------
 Todo se hace desde la carpeta "home"
 
-41. ssh-keygen -t rsa -b 4096 -C "email"
+41. ssh-keygen -t rsa -b 4096 -C "diego.palma@utec.edu.pe"
     - Generación de claves de cifrado pública y privada
 
 42. eval $(ssh-agent -s)
@@ -118,6 +120,9 @@ Posteriormente, hay que proporcionar a GitHub una copia de nuestra llave públic
 En la ruta: Settings/SSH and GPG keys . Se tien que copiar el contenido del archivo
 id_rsa.pub que se generó con el comando ssh-keygen.. 
 
-
+44. Ahora cambiar la url del proyecto por el SSH
+    - Copia el link ssh que genera Github
+    - En la consola escribir: git remote set-url origin "git@github.com:DPR00/hyperblog.git"
+    - Comprobar el cambio con: git remote -v
 
 ------------------------------------------------------------------------------------------------------------------------------
