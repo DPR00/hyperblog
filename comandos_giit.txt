@@ -100,7 +100,7 @@
     git pull origin master --allow-unrelated-histories
     - Fusiona repositorios con historias no relacionadas-
 
-40. git remote set-url origin <ssh-url>
+40-44. git remote set-url origin <ssh-url>
     - Configura git para conectar con el repositorio remoto
     a través de SSH (en lugar de https)
 --------------------------------SSH: Generación de claves pública y privadas-----------------------------------------------------------------------
