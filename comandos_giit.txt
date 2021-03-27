@@ -1,82 +1,128 @@
-* git init
+-------------------------------- Comandos útiles --------------------------------------------------------------------------------------------------
+1. git init
     - Se ejecuta en la carpeta donde están los archivos de tu proyecto
     - Cuando se ejecuta el comando creamos:
         a. Staging: Es el área en la memoria RAM donde iremos añadiendo los cambios (tracked)
         b. Repository (/master): Es el directorio que conocemos como /.git/ que es el lugar donde se guardarán todos los cambios del proyecto.
 
-* git config --global user.name "My Name"
+2. git config --global user.name "My Name"
     - Configuramos el nombre en git
 
-* git config --global user.email "My email"
+3. git config --global user.email "My email"
     - Configuramos nuestro email en git
 
-* git config --list
+4. git config --list
     - Nos muestra la configuración por defecto de nuestro git
 
-* git add file.ext
+5. git add file.ext
     - Agregamos el archivo al Staging, en este punto el archivo espera a que lo agreguemos al repositorio.
     Nota: Antes de utilizar este comando, el archivo está en un estado de "untracked", luego de usar este comando el archivo está en
           estado "tracked" (Dentro de Stagging)
     * git add .
         - Agregamos TODOS los archivos dentro de nuestra carpeta. Es decir, se agegan al Staging.
 
-* git rm -cached file.ext
+6. git rm -cached file.ext
     - Eliminamos el archivo del Staging area y se vuelve "Untracked"
 
-* git commit -m "mensaje"
+7. git commit -m "mensaje"
     - Luego de escribir un mensaje descriptivo, enviamos el archivo al repositorio/master.
     Nota: Cada commit es una nueva versión con cambios de tu archivo.
 
-* git status
+8. git status
     - Nos muestra el status de nuestro proyecto.
 
-* git log
+9. git log
     - Nos muestra el historial de commits hechos desde el más reciente hasta el más antiguo.
 
-* git log --stat 
+10. git log --stat 
     - Nos muestra el historial de cambios de cada commit desde el más reciente al más antiguo
 
-* git show file.ext
+11. git show file.ext
     - Muestra los cambios hechos al archivo en el último commit
 
-* git diff
+12. git diff
     - Nos muestra las diferencias entre los cambios que estan en Stagging y los que aún no se han añadido
 
-* git diff $commit1 $commit2
+13. git diff $commit1 $commit2
     - Nos muestra las diferencias entre las 2 versiones de los commits
 
-* git reset $commit --soft
+14. git reset $commit --soft
     - Volvemos nuestro archivo a la versión del commit indicada, pero sin borrar los commits usados anteriormente
     - Borramos todo el historial y los registros de Git pero guardamos los cambios que tengamos en Staging,
     así podemos aplicar las últimas actualizaciones a un nuevo commit.
 
-* git reset $commit --hard
+15. git reset $commit --hard
     - Volvemos nuestro archivo a la versión del commit indicada, BORRANDO TODOS los commits usados anteriores a la version del
     commit indicada.
     - Borra todo. Todo todito, absolutamente todo. Toda la información de los commits y del área de staging se borra del historial.
     
-* git checkout $commit file.ext
+16. git checkout $commit file.ext
     - Volvemos nuestro archivo a la versión del commit indicada, sin cambiar nada en el Staging.
    
-* git checkout master file.ext
+17. git checkout master file.ext
     - Volvemos nuestro archivo a la version que teniamos antes de hacer el primer checkout, sin cambiar nada en el Staging.
 
 ------------------------------------ Comandos para colaborar en un proyecto grande de Github --------------------------------------------
-1. git log --oneline -  : Te muestra el id commit y el título del commit.
-2. git log --decorate-  : Te muestra donde se encuentra el head point en el log.
-3. git log --stat -     : Explica el número de líneas que se cambiaron brevemente.
-4. git log -p-          : Explica el número de líneas que se cambiaron y te muestra que se cambió en el contenido.
-5. git shortlog -       : Indica que commits ha realizado un usuario, mostrando el usuario y el titulo de sus commits.
-6. git log --graph --oneline --decorate y
-7. git log --pretty=format:"%cn hizo un commit %h el dia %cd" - : Muestra mensajes personalizados de los commits.
-8. git log -3 -         : Limitamos el número de commits.
-9. git log --after=“2018-1-2” 
-10. git log --after=“today” y
-11. git log --after=“2018-1-2” --before=“today” : Commits para localizar por fechas.
-12. git log --author=“Name Author” : Commits realizados por autor que cumplan exactamente con el nombre.
-13. git log --grep=“INVIE”     : Busca los commits que cumplan tal cual está escrito entre las comillas.
-14. git log --grep=“INVIE” –i- : Busca los commits que cumplan sin importar mayúsculas o minúsculas.
-15. git log – index.html-      : Busca los commits en un archivo en específico.
-16. git log -S “Por contenido” : Buscar los commits con el contenido dentro del archivo.
-17. git log > log.txt          : Guardar los logs en un archivo txt
-----------------------------------------------------------------------------------------------------------------------
+18. git log --oneline -  : Te muestra el id commit y el título del commit.
+19. git log --decorate-  : Te muestra donde se encuentra el head point en el log.
+20. git log --stat -     : Explica el número de líneas que se cambiaron brevemente.
+21. git log -p-          : Explica el número de líneas que se cambiaron y te muestra que se cambió en el contenido.
+22. git shortlog -       : Indica que commits ha realizado un usuario, mostrando el usuario y el titulo de sus commits.
+23. git log --graph --oneline --decorate y
+24. git log --pretty=format:"%cn hizo un commit %h el dia %cd" - : Muestra mensajes personalizados de los commits.
+25. git log -3 -         : Limitamos el número de commits.
+26. git log --after=“2018-1-2” 
+27. git log --after=“today” y
+28. git log --after=“2018-1-2” --before=“today” : Commits para localizar por fechas.
+29. git log --author=“Name Author” : Commits realizados por autor que cumplan exactamente con el nombre.
+30. git log --grep=“INVIE”     : Busca los commits que cumplan tal cual está escrito entre las comillas.
+31. git log --grep=“INVIE” –i- : Busca los commits que cumplan sin importar mayúsculas o minúsculas.
+32. git log – index.html-      : Busca los commits en un archivo en específico.
+33. git log -S “Por contenido” : Buscar los commits con el contenido dentro del archivo.
+34. git log > log.txt          : Guardar los logs en un archivo txt
+------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------Apuntes comandos Github ---------------------------------------------------------------
+35. git remote add origin <https-url>
+    - Estableces un origen remoto: sede del repositorio.
+    para gestionar nuestro proyecto mediante conexión https
+
+36. git remote -v
+    - verifica la existencia del origen remoto
+
+37. git config -l
+    - Permite ver los parámetros de configuración 
+
+38. git push origin master 
+    - Fusiona una copia del master local con el remoto
+
+39. git pull origin master
+    - Fusiona una copia del master remoto con el local
+    git pull origin master --allow-unrelated-histories
+    - Fusiona repositorios con historias no relacionadas-
+
+40-44. git remote set-url origin <ssh-url>
+    - Configura git para conectar con el repositorio remoto
+    a través de SSH (en lugar de https)
+--------------------------------SSH: Generación de claves pública y privadas-----------------------------------------------------------------------
+Todo se hace desde la carpeta "home"
+
+41. ssh-keygen -t rsa -b 4096 -C "diego.palma@utec.edu.pe"
+    - Generación de claves de cifrado pública y privada
+
+42. eval $(ssh-agent -s)
+    - Comprueba si el servicio de cifrado está activo
+    - Se obtiene: Agent pid "numero"
+
+43. ssh-add <ruta-id_rsa> 
+    - Informa al sistema de la ubicación del archivo que contiene la llave privada
+
+Posteriormente, hay que proporcionar a GitHub una copia de nuestra llave pública:
+En la ruta: Settings/SSH and GPG keys . Se tien que copiar el contenido del archivo
+id_rsa.pub que se generó con el comando ssh-keygen.. 
+
+44. Ahora cambiar la url del proyecto por el SSH
+    - Copia el link ssh que genera Github
+    - En la consola escribir: git remote set-url origin "git@github.com:DPR00/hyperblog.git"
+    - Comprobar el cambio con: git remote -v
+
+------------------------------------------------------------------------------------------------------------------------------
